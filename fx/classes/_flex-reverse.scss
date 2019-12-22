@@ -1,16 +1,12 @@
 /*------------------------------------------------------------------------------
- flex
+ flex reverse
 ------------------------------------------------------------------------------*/
 
 @each $size, $breakpoint in $breakpoints {
     @media all and (min-width: $breakpoint) {
-        .flex-#{$size} {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-wrap: wrap;
+        .flex-#{$size}-reverse {
+            -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
         }
     }
 }

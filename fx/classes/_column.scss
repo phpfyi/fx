@@ -1,16 +1,15 @@
 /*------------------------------------------------------------------------------
- flex
+ columns
 ------------------------------------------------------------------------------*/
+
+$column: 100 / $columns;
 
 @each $size, $breakpoint in $breakpoints {
     @media all and (min-width: $breakpoint) {
-        .flex-#{$size} {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-wrap: wrap;
+        @for $count from 1 through $columns {
+            .col-#{$count}-#{$size} {
+                width: unquote($column * $count + "%");
+            }
         }
     }
 }
