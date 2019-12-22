@@ -12,7 +12,10 @@
     "url": "git+https://github.com/phpfyi/fx.git"
   },
   "keywords": [
-    "css"
+    "css",
+    "css framework",
+    "scss",
+    "sass"
   ],
   "author": "Andrew Mc Cormack",
   "license": "ISC",
