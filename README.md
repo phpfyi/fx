@@ -1,6 +1,6 @@
-# FX
+# FX - Micro CSS Framework
 
-Micro CSS Framework
+Size - 2KB compressed
 
 ![Code Language](https://img.shields.io/github/languages/top/phpfyi/fx)
 ![Code Size](https://img.shields.io/github/languages/code-size/phpfyi/fx)
@@ -96,6 +96,8 @@ Display classes can show / hide elements based on the CSS display / visibility r
 ### Flex
 
 Used to turn an element into a flex container for child elements.
+Container classes already have flex rules applied.
+Use col classes on child elements of flex.
 
 ```css
 .flex /* flex child elements */
@@ -111,4 +113,53 @@ There is also a class to reverse the flex layout of child elements across breakp
 .flex-reverse-xs /* flex reverse child elements at xs breakpoint */
 .flex-reverse-m /* flex reverse child elements at m breakpoint */
 ...
+```
+
+## Float
+
+Used to float elements.
+
+```css
+.fl /* float left */
+.fr /* float right */
+```
+
+## Margin
+
+Used to add / remove margins around elements.
+
+```css
+.mar-5 /* used to add 5px margin around elements */
+.mar-10 /* used to add 10px margin around elements */
+... up to 50 in multiples of 5
+
+.mar-h-5 /* used to add 5px margin left and right around elements */
+.mar-h-10 /* used to add 10px margin left and right around elements */
+... up to 50 in multiples of 5
+
+.mar-v-5 /* used to add 5px margin top and bottom around elements */
+.mar-v-10 /* used to add 10px margin top and bottom around elements */
+... up to 50 in multiples of 5
+
+.mar-none /* remove all margins around an element */
+```
+
+## Padding
+
+Used to add / remove padding around elements.
+
+```css
+.pad-5 /* used to add 5px padding around elements */
+.pad-10 /* used to add 10px padding around elements */
+... up to 50 in multiples of 5
+
+.pad-h-5 /* used to add 5px padding left and right around elements */
+.pad-h-10 /* used to add 10px padding left and right around elements */
+... up to 50 in multiples of 5
+
+.pad-v-5 /* used to add 5px padding top and bottom around elements */
+.pad-v-10 /* used to add 10px padding top and bottom around elements */
+... up to 50 in multiples of 5
+
+.pad-none /* remove all padding around an element */
 ```
