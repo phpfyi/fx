@@ -47,11 +47,13 @@ Used to clear floated elements.
 
 Used to create column layouts.
 Defaults to 12 columns allowing 1 - 12 classes. Set the $columns config to override.
+Columns should be inside an element with a container class (or another flex element)
 
 ```css
 .col-1 /* 1/12 width */
 .col-6 /* 1/2 width */
 .col-12 /* 100% width */
+...
 ```
 
 Using columns across breakpoints.
@@ -60,4 +62,16 @@ Using columns across breakpoints.
 .col-1-xs /* 1/12 width at xs breakpoint */
 .col-6-m /* 1/2 width at m breakpoint  */
 .col-12-xl /* 100% width at xl breakpoint  */
+...
+```
+
+## Container
+
+Container elements can be used to create fixed centered elements with a variable number of child columns.
+
+```css
+.container /* full width flex container */
+.container-xs /* xs width centered flex container */
+.container-m /* m width centered flex container */
+...
 ```
