@@ -1,0 +1,23 @@
+{
+  "name": "fx",
+  "version": "1.0.0",
+  "description": "Micro CSS framework",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch .:dist/css --style",
+    "prod": "sass --watch .:dist/css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phpfyi/fx.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Andrew Mc Cormack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phpfyi/fx/issues"
+  },
+  "homepage": "https://github.com/phpfyi/fx#readme"
+}
