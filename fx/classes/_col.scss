@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+ columns
+------------------------------------------------------------------------------*/
+
+.col {
+    padding: $column-padding;
+}
+
+.cols-r {
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+$column: 100 / $columns;
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        $width: $column * $i + "%";
+        width: unquote($width);
+    }
+}
+
+@each $size, $breakpoint in $breakpoints {
+    @media all and (min-width: $breakpoint) {
+        @for $i from 1 through $columns {
+            .col-#{$i}-#{$size} {
+                $width: $column * $i + "%";
+                width: unquote($width);
+            }
+        }
+    }
+}
