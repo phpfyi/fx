@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------------------
+ box-sizing
+------------------------------------------------------------------------------*/
+
+@mixin gradient-v($start: #000000, $from: 0%, $stop: #000000, $to: 100%) {
+    background: $start;
+    background: -webkit-gradient(linear, left top, left bottom, from(ie-hex-str($start)), to(ie-hex-str($stop)));
+    background: -moz-linear-gradient(center top, $start $from, $stop $to);
+    background: -moz-gradient(center top, $start $from, $stop $to);
+    background: -webkit-linear-gradient(top, $start $from, $stop $to);
+    background: -o-linear-gradient(top, $start $from, $stop $to);
+    background: -ms-linear-gradient(top, $start $from, $stop $to);
+    background: linear-gradient(to bottom, $start $from, $stop $to);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str($start)}', endColorstr='#{ie-hex-str($stop)}',GradientType=0 );
+}
