@@ -2,6 +2,6 @@
  box-shadow
 ------------------------------------------------------------------------------*/
 
-@mixin box-shadow($x: 0, $y: 0, $blur: 1px, $color: #000) {
+@mixin box-shadow($x: 0, $y: 0, $blur: 1px, $color: $black) {
     @include prefix(box-shadow, $x $y $blur $color);
 }

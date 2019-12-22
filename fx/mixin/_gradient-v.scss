@@ -2,7 +2,7 @@
  box-sizing
 ------------------------------------------------------------------------------*/
 
-@mixin gradient-v($start: #000000, $from: 0%, $stop: #000000, $to: 100%) {
+@mixin gradient-v($from: 0%, $start: $white, $to: 100%, $stop: $black) {
     background: $start;
     background: -webkit-gradient(linear, left top, left bottom, from(ie-hex-str($start)), to(ie-hex-str($stop)));
     background: -moz-linear-gradient(center top, $start $from, $stop $to);
