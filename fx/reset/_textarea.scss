@@ -1,7 +1,11 @@
 /*------------------------------------------------------------------------------
- button reset
+ textarea reset
 ------------------------------------------------------------------------------*/
 
-button {
-    @include button;
+textarea {
+    @include input;
+
+    min-height: 100px;
+    overflow: auto;
+    resize: vertical;
 }

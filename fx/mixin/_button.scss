@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------------
+ button mixin
+------------------------------------------------------------------------------*/
+
+@mixin button {
+    background-color: $grey-xd;
+    border: 0px;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $body-font;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    outline: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    -webkit-appearance: button;
+    @include border-radius(20px);
+}

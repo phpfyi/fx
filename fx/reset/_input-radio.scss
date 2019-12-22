@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------------------
+ input radio reset
+------------------------------------------------------------------------------*/
+
+.input[type="radio"] {
+    cursor: pointer;
+    display: inline-block;
+    height: 26px;
+    margin-right: 10px;
+    padding: 0 0 0 0;
+    vertical-align: top;
+    width: 26px;
+
+    &:checked {
+        line-height: 24px;
+        text-align: center;
+
+        &:before {
+            content: "\002714";
+        }
+    }
+}
