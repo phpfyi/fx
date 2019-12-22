@@ -1,5 +1,10 @@
 # FX - Micro CSS Framework
 
+![Code Language](https://img.shields.io/github/languages/top/phpfyi/fx)
+![Code Size](https://img.shields.io/github/languages/code-size/phpfyi/fx)
+![Commit Activity](https://img.shields.io/github/commit-activity/m/phpfyi/fx)
+![Latest Commit](https://img.shields.io/github/last-commit/phpfyi/fx)
+
 FX is a collection of CSS resets, classes, and mixins for rapidly building UI's across devices.
 
 The goals of the project are as follows:
@@ -9,11 +14,6 @@ The goals of the project are as follows:
 * To abstract out common CSS rules into re-usable classes.
 * To create a set of short but descriptive CSS classnames.
 * To minimise the amount of work and HTML required to build layouts.
-
-![Code Language](https://img.shields.io/github/languages/top/phpfyi/fx)
-![Code Size](https://img.shields.io/github/languages/code-size/phpfyi/fx)
-![Commit Activity](https://img.shields.io/github/commit-activity/m/phpfyi/fx)
-![Latest Commit](https://img.shields.io/github/last-commit/phpfyi/fx)
 
 ---
 
