@@ -2,24 +2,18 @@
  margins
 ------------------------------------------------------------------------------*/
 
-@for $i from 1 through 10 {
-    $size: $i * 5;
-
-    .mar-#{$size} {
-        margin: $i * 5px;
+@each $increment in $margin-increments {
+    .mar-#{$increment} {
+        margin: unquote($increment + "px");
     }
 
-    .mar-h-#{$size} {
-        margin-left: $i * 5px;
-        margin-right: $i * 5px;
+    .mar-h-#{$increment} {
+        margin-left: unquote($increment + "px");
+        margin-right: unquote($increment + "px");
     }
 
-    .mar-v-#{$size} {
-        margin-bottom: $i * 5px;
-        margin-top: $i * 5px;
+    .mar-v-#{$increment} {
+        margin-bottom: unquote($increment + "px");
+        margin-top: unquote($increment + "px");
     }
-}
-
-.mar-none {
-    margin: 0;
 }

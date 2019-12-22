@@ -2,8 +2,8 @@
  widths
 ------------------------------------------------------------------------------*/
 
-@for $i from 1 through 100 {
-    .w-#{$i} {
-        width: $i * 1%;
+@each $increment in $width-increments {
+    .w-#{$increment} {
+        width: unquote($increment + "px");
     }
 }

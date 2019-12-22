@@ -2,10 +2,8 @@
  vertical heights
 ------------------------------------------------------------------------------*/
 
-@for $i from 1 through 10 {
-    $value: $i * 10;
-
-    .vh-#{$value} {
-        height: unquote($value + "vh");
+@each $increment in $height-increments {
+    .vh-#{$increment} {
+        height: unquote($increment + "vh");
     }
 }

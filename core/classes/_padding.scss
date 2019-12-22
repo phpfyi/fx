@@ -2,24 +2,18 @@
  padding
 ------------------------------------------------------------------------------*/
 
-@for $i from 1 through 10 {
-    $size: $i * 5;
-
-    .pad-#{$size} {
-        padding: $i * 5px;
+@each $increment in $padding-increments {
+    .pad-#{$increment} {
+        padding: unquote($increment + "px");
     }
 
-    .padh-#{$size} {
-        padding-left: $i * 5px;
-        padding-right: $i * 5px;
+    .pad-h-#{$increment} {
+        padding-left: unquote($increment + "px");
+        padding-right: unquote($increment + "px");
     }
 
-    .padv-#{$size} {
-        padding-bottom: $i * 5px;
-        padding-top: $i * 5px;
+    .pad-v-#{$increment} {
+        padding-bottom: unquote($increment + "px");
+        padding-top: unquote($increment + "px");
     }
-}
-
-.pad-none {
-    padding: 0;
 }

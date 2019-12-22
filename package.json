@@ -1,7 +1,7 @@
 {
   "name": "fx",
   "version": "1.0.0",
-  "description": "Micro CSS framework",
+  "description": "CSS framework",
   "main": "index.js",
   "scripts": {
     "dev": "sass --watch .:dist/css",

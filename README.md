@@ -1,4 +1,4 @@
-# FX - Micro CSS Framework
+# FX - CSS Framework
 
 ![Code Language](https://img.shields.io/github/languages/top/phpfyi/fx)
 ![Code Size](https://img.shields.io/github/languages/code-size/phpfyi/fx)
@@ -118,8 +118,13 @@ Used to clear floated elements.
 ### Columns
 
 Used to create column layouts.
-Defaults to 12 columns allowing 1 - 12 classes. Set the $columns config to override.
 Columns should be inside an element with a container class (or another flex element)
+
+Configure using $columns
+
+```scss
+$columns: 12;
+```
 
 ```css
 .col-1 /* 1/12 width */
@@ -194,40 +199,34 @@ Used to float elements.
 
 Used to add / remove margins around elements.
 
+Configure using $margin-increments 
+
+```scss
+$margin-increments: (0, 5, 10, 15, 20, 25);
+```
+
 ```css
-.mar-5 /* used to add 5px margin around elements */
-.mar-10 /* used to add 10px margin around elements */
-... up to 50 in multiples of 5
-
-.mar-h-5 /* used to add 5px margin left and right around elements */
-.mar-h-10 /* used to add 10px margin left and right around elements */
-... up to 50 in multiples of 5
-
-.mar-v-5 /* used to add 5px margin top and bottom around elements */
-.mar-v-10 /* used to add 10px margin top and bottom around elements */
-... up to 50 in multiples of 5
-
-.mar-none /* remove all margins around an element */
+.mar-5 /* adds 5px margin around elements */
+.mar-h-5 /* adds 5px margin left and right around elements - horizontal */
+.mar-v-5 /* adds 5px margin top and bottom around elements - vertical */
+...
 ```
 
 ## Padding
 
 Used to add / remove padding around elements.
 
+Configure using $padding-increments 
+
+```scss
+$padding-increments: (0, 5, 10, 15, 20, 25);
+```
+
 ```css
-.pad-5 /* used to add 5px padding around elements */
-.pad-10 /* used to add 10px padding around elements */
-... up to 50 in multiples of 5
-
-.pad-h-5 /* used to add 5px padding left and right around elements */
-.pad-h-10 /* used to add 10px padding left and right around elements */
-... up to 50 in multiples of 5
-
-.pad-v-5 /* used to add 5px padding top and bottom around elements */
-.pad-v-10 /* used to add 10px padding top and bottom around elements */
-... up to 50 in multiples of 5
-
-.pad-none /* remove all padding around an element */
+.pad-5 /* adds 5px padding around elements */
+.pad-h-5 /* adds 5px padding left and right around elements - horizontal */
+.pad-v-5 /* adds 5px padding top and bottom around elements - vertical */
+...
 ```
 
 ## Position
@@ -258,10 +257,15 @@ Used to align text elements across breakpoints.
 
 Used to define the vertical height on an element.
 
+Configure using $height-increments 
+
+```scss
+$height-increments: (0, 20, 40, 60, 80, 100);
+```
+
 ```css
-.vh-10 /* 10% height */
 .vh-20 /* 20% height */
-... up to 100 in multiples of 10
+...
 ```
 
 ## Visibility
@@ -277,8 +281,13 @@ Used to change element visibility.
 
 Used to set an elements width.
 
+Configure using $width-increments 
+
+```scss
+$width-increments: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+```
+
 ```css
-.w-1 /* 1% width */
-.w-2 /* 2% width */
-... up to 100 in multiples of 1
+.w-5 /* 5% width */
+...
 ```
