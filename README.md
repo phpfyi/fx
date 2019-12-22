@@ -163,3 +163,37 @@ Used to add / remove padding around elements.
 
 .pad-none /* remove all padding around an element */
 ```
+
+## Position
+
+Used to make elements absolute and relative positioned.
+
+```css
+.position-c /* absolute positioned with a z-index of 1 and centered */
+.position-v /* absolute positioned with a z-index of 1 and centered vertically */
+.relative /* relative positioned with a z-index of 0 */
+```
+
+## Text Align
+
+Used to align text elements across breakpoints.
+
+```css
+.txt-l /* aligns text left */
+.txt-r /* aligns text right */
+.txt-c /* aligns text center */
+
+.txt-l-xs /* aligns text left at xs breakpoint */
+.txt-l-m /* aligns text left at m breakpoint */
+...
+```
+
+## Vetical Height
+
+Used to define the vertical height on an element.
+
+```css
+.vh-10 /* 10% height */
+.vh-20 /* 20% height */
+... up to 100 in multiples of 10
+```
