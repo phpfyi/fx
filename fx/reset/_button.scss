@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------------------
+ button reset
+------------------------------------------------------------------------------*/
+
+button {
+    background-color: $grey-xd;
+    border: 0px;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-family: $body-font;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    outline: none;
+    padding: 0 20px;
+    text-decoration: none;
+    -webkit-appearance: button;
+    @include border-radius(4px);
+}
