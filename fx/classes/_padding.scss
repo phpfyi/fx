@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------------
+ padding
+------------------------------------------------------------------------------*/
+
+@for $i from 1 through 10 {
+    $size: $i * 5;
+
+    .pad-#{$size} {
+        padding: $i * 5px;
+    }
+
+    .padh-#{$size} {
+        padding-left: $i * 5px;
+        padding-right: $i * 5px;
+    }
+
+    .padv-#{$size} {
+        padding-bottom: $i * 5px;
+        padding-top: $i * 5px;
+    }
+}
+
+.pad-none {
+    padding: 0;
+}
