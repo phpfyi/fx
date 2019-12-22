@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------------------
+ element scroll
+------------------------------------------------------------------------------*/
+
+@mixin scroll-y {
+    overflow-y: scroll;
+    -ms-overflow-y: scroll;
+}
+
+@mixin scroll-x {
+    overflow-x: scroll;
+    -ms-overflow-x: scroll;
+}
+
+@mixin scroll-x {
+    overflow: scroll;
+}
