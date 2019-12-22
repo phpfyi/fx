@@ -4,7 +4,7 @@
   "description": "Micro CSS framework",
   "main": "index.js",
   "scripts": {
-    "dev": "sass --watch .:dist/css --style",
+    "dev": "sass --watch .:dist/css",
     "prod": "sass --watch .:dist/css --style compressed"
   },
   "repository": {

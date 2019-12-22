@@ -17,6 +17,7 @@ The goals of the project are as follows:
 
 ---
 
+- [Installation](#installation)
 - [CSS Reset](#css-reset)
 - [CSS Classes](#css-classes)
   - [Breakpoints](#breakpoints)
@@ -34,6 +35,38 @@ The goals of the project are as follows:
   - [Vertical Height](#vertical-height)
   - [Visibility](#visibility)
   - [Width](#width)
+
+---
+
+## Installation
+
+Require the FX framework package via composer.
+
+```json
+{
+    "require": {
+        "phpfyi/fx": "1.0.*"
+    }
+}
+```
+
+If you wish to use the default framework config just import the core file.
+
+```scss
+@import 'vendor/phpfyi/fx/core';
+```
+
+If you wish to use your own custom config create a copy of the FX vars file with your custom config and import the core FX files.
+
+```scss
+@import 'vars';
+
+@import 'vendor/phpfyi/fx/core/mixins';
+@import 'vendor/phpfyi/fx/core/reset';
+@import 'vendor/phpfyi/fx/core/classes';
+```
+
+If you wish to import specific parts of the framework please see the individual files and their imports.
 
 ---
 
