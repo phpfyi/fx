@@ -7,7 +7,7 @@ $column: 100 / $columns;
 @each $size, $breakpoint in $breakpoints {
     @media all and (min-width: $breakpoint) {
         @for $count from 1 through $columns {
-            .col-#{$count}-#{$size} {
+            .col-#{$count}#{$size} {
                 width: unquote($column * $count + "%");
             }
         }

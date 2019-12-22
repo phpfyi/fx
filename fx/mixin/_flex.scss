@@ -2,10 +2,11 @@
  flex
 ------------------------------------------------------------------------------*/
 
-@each $size, $breakpoint in $breakpoints {
-    @media all and (min-width: $breakpoint) {
-        .flex#{$size} {
-            @include flex;
-        }
-    }
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
 }
