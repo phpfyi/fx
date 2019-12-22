@@ -1,5 +1,15 @@
 # FX - Micro CSS Framework
 
+FX is a collection of CSS resets, classes, and mixins for rapidly building UI's across devices.
+
+The goals of the project are as follows:
+
+* To create a set of reset rules that take into account accessibly and create a consistent experience across devices and screen sizes.
+* To create an extremely lightweight framework that is easy to extend.
+* To abstract out common CSS rules into re-usable classes.
+* To create a set of short but descriptive CSS classnames.
+* To minimise the amount of work and HTML required to build layouts.
+
 ![Code Language](https://img.shields.io/github/languages/top/phpfyi/fx)
 ![Code Size](https://img.shields.io/github/languages/code-size/phpfyi/fx)
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/phpfyi/fx)
@@ -38,6 +48,7 @@ The FX framework contains sensible resets for common elements such as form eleme
 ### Breakpoints
 
 The default breakpoint config is as follows and is appended to certain CSS classes to make them responsive.
+Can be overidden with custom config.
 
 ```scss
 $breakpoints: (
