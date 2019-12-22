@@ -7,7 +7,13 @@ Micro CSS Framework
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/phpfyi/fx)
 ![Latest Commit](https://img.shields.io/github/last-commit/phpfyi/fx)
 
-## Breakpoints
+## CSS Reset
+
+The FX framework contains sensible resets for common elements such as form elements.
+
+## CSS Classes
+
+### Breakpoints
 
 The default breakpoint config is as follows and is appended to certain CSS classes to make them responsive.
 
@@ -22,7 +28,7 @@ $breakpoints: (
 );
 ```
 
-## Alignment
+### Alignment
 
 Align flex and non flex elements.
 
@@ -33,7 +39,7 @@ Align flex and non flex elements.
 .align-h-r /* flex align items horizontally and to the right */
 ```
 
-## Clear
+### Clear
 
 Used to clear floated elements.
 
@@ -43,7 +49,7 @@ Used to clear floated elements.
 .cb /* clear both */
 ```
 
-## Columns
+### Columns
 
 Used to create column layouts.
 Defaults to 12 columns allowing 1 - 12 classes. Set the $columns config to override.
@@ -65,7 +71,7 @@ Using columns across breakpoints.
 ...
 ```
 
-## Container
+### Container
 
 Container elements can be used to create fixed centered elements with a variable number of child columns.
 
@@ -73,5 +79,38 @@ Container elements can be used to create fixed centered elements with a variable
 .container /* full width flex container */
 .container-xs /* xs width centered flex container */
 .container-m /* m width centered flex container */
+...
+```
+
+### Display
+
+Display classes can show / hide elements based on the CSS display / visibility rules.
+
+```css
+.block /* display block */
+.inline /* display inline */
+.inline-block /* display inline-block */
+.hide /* display none */
+.visible /* visibility visible */
+.invisible /* visibility hidden */
+```
+
+### Flex
+
+Used to turn an element into a flex container for child elements.
+
+```css
+.flex /* flex child elements */
+.flex-xs /* flex child elements at xs breakpoint */
+.flex-m /* flex child elements at m breakpoint */
+...
+```
+
+There is also a class to reverse the flex layout of child elements across breakpoints.
+
+```css
+.flex-reverse /* flex reverse child elements */
+.flex-reverse-xs /* flex reverse child elements at xs breakpoint */
+.flex-reverse-m /* flex reverse child elements at m breakpoint */
 ...
 ```
