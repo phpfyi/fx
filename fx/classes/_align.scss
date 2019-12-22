@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------------------
+ flex and box alignment
+------------------------------------------------------------------------------*/
+
+.align-c {
+    align-items: center;
+    justify-content: center;
+}
+
+.align-v {
+    align-items: center;
+}
+
+.align-h {
+    margin: 0 auto;
+}
+
+.align-h-r {
+    justify-content: flex-end;
+}
