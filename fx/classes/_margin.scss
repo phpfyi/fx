@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------------
+ margins
+------------------------------------------------------------------------------*/
+
+@for $i from 1 through 10 {
+    $size: $i * 5;
+
+    .mar-#{$size} {
+        margin: $i * 5px;
+    }
+
+    .marh-#{$size} {
+        margin-left: $i * 5px;
+        margin-right: $i * 5px;
+    }
+
+    .marv-#{$size} {
+        margin-bottom: $i * 5px;
+        margin-top: $i * 5px;
+    }
+}
+
+.mar-none {
+    margin: 0;
+}
