@@ -9,17 +9,18 @@
     cursor: pointer;
     display: inline-block;
     font-family: $body-font;
-    font-size: 14px;
+    font-size: $font-size;
     font-weight: 600;
     height: 40px;
     letter-spacing: 1px;
-    line-height: 30px;
+    line-height: $line-height;
     margin: 0 0 20px 0;
     outline: none;
-    padding: 5px 20px;
+    padding: 11px 20px;
     text-align: center;
     text-decoration: none;
     width: 100%;
     -webkit-appearance: button;
+
     @include border-radius(20px);
 }

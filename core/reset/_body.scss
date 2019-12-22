@@ -3,8 +3,10 @@
 ------------------------------------------------------------------------------*/
 
 body {
-    background-color: white;
+    background-color: $white;
+    font-size: $font-size;
     height: 100%;
+    line-height: $line-height;
     position: relative;
     text-align: center;
     z-index: 0;
