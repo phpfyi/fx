@@ -1,15 +1,37 @@
 # FX - Micro CSS Framework
 
-Size - 2KB compressed
-
 ![Code Language](https://img.shields.io/github/languages/top/phpfyi/fx)
 ![Code Size](https://img.shields.io/github/languages/code-size/phpfyi/fx)
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/phpfyi/fx)
 ![Latest Commit](https://img.shields.io/github/last-commit/phpfyi/fx)
 
+---
+
+- [CSS Reset](#css-reset)
+- [CSS Classes](#css-classes)
+  - [Breakpoints](#breakpoints)
+  - [Alignment](#alignment)
+  - [Clear](#clear)
+  - [Columns](#columns)
+  - [Container](#container)
+  - [Display](#display)
+  - [Flex](#flex)
+  - [Float](#float)
+  - [Margin](#margin)
+  - [Padding](#padding)
+  - [Position](#position)
+  - [Text Align](#text-align)
+  - [Vertical Height](#vertical-height)
+  - [Visibility](#visibility)
+  - [Width](#width)
+
+---
+
 ## CSS Reset
 
 The FX framework contains sensible resets for common elements such as form elements.
+
+---
 
 ## CSS Classes
 
@@ -188,7 +210,7 @@ Used to align text elements across breakpoints.
 ...
 ```
 
-## Vetical Height
+## Vertical Height
 
 Used to define the vertical height on an element.
 
@@ -196,4 +218,23 @@ Used to define the vertical height on an element.
 .vh-10 /* 10% height */
 .vh-20 /* 20% height */
 ... up to 100 in multiples of 10
+```
+
+## Visibility
+
+Used to change element visibility.
+
+```css
+.visible /* visibility visible */
+.invisible /* visibility hidden */
+```
+
+## Width
+
+Used to set an elements width.
+
+```css
+.w-1 /* 1% width */
+.w-2 /* 2% width */
+... up to 100 in multiples of 1
 ```
