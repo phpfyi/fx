@@ -1,19 +1,11 @@
 /*------------------------------------------------------------------------------
- display
+ visibility
 ------------------------------------------------------------------------------*/
 
-.block {
-    display: block;
+.visible {
+    visibility: visible;
 }
 
-.inline {
-    display: inline;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-.hide {
-    display: none;
+.invisible {
+    visibility: hidden;
 }

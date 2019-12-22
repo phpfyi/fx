@@ -91,8 +91,6 @@ Display classes can show / hide elements based on the CSS display / visibility r
 .inline /* display inline */
 .inline-block /* display inline-block */
 .hide /* display none */
-.visible /* visibility visible */
-.invisible /* visibility hidden */
 ```
 
 ### Flex
