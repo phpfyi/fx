@@ -47,8 +47,29 @@ $heading-font: "Helvetica", sans-serif;
 $body-font: "Helvetica", sans-serif;
 $code-font: monospace;
 
+/*------------------------------------------------------------------------------
+ font size
+------------------------------------------------------------------------------*/
+
 $font-size: 14px;
 $line-height: 18px;
+
+/*------------------------------------------------------------------------------
+ button
+------------------------------------------------------------------------------*/
+
+$button-background: $grey-xd;
+$button-border: 0px;
+$button-color: $white;
+$button-font: $body-font;
+$button-font-size: 14px;
+$button-font-weight: 600;
+$button-height: 40px;
+$button-line-height: 18px;
+$button-margin: 0 0 20px 0;
+$button-padding: 11px 20px;
+$button-radius: 20px;
+$button-width: 100%;
 
 /*------------------------------------------------------------------------------
  margin

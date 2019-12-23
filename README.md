@@ -19,6 +19,8 @@ The goals of the project are as follows:
 
 - [Installation](#installation)
 - [CSS Reset](#css-reset)
+  - [Fonts](#fonts)
+  - [Buttons](#buttons)
 - [CSS Classes](#css-classes)
   - [Breakpoints](#breakpoints)
   - [Alignment](#alignment)
@@ -66,7 +68,35 @@ If you wish to import specific parts of the framework please see the individual 
 
 ## CSS Reset
 
-The FX framework contains sensible resets for common elements such as form elements.
+The FX framework contains sensible resets for common elements such as form elements and allows overriding the default configuration
+
+### Fonts
+
+Modify the following configuration to override global font styles.
+
+```scss
+$font-size: 14px;
+$line-height: 18px;
+```
+
+### Buttons
+
+Modify the following configuration to override button styles.
+
+```scss
+$button-background: $grey-xd;
+$button-border: 0px;
+$button-color: $white;
+$button-font: $body-font;
+$button-font-size: 14px;
+$button-font-weight: 600;
+$button-height: 40px;
+$button-line-height: 18px;
+$button-margin: 0 0 20px 0;
+$button-padding: 11px 20px;
+$button-radius: 20px;
+$button-width: 100%;
+```
 
 ---
 

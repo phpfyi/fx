@@ -3,24 +3,24 @@
 ------------------------------------------------------------------------------*/
 
 @mixin button {
-    background-color: $grey-xd;
-    border: 0px;
-    color: $white;
+    background: $button-background;
+    border: $button-border;
+    color: $button-color;
     cursor: pointer;
     display: inline-block;
-    font-family: $body-font;
-    font-size: $font-size;
-    font-weight: 600;
-    height: 40px;
+    font-family: $button-font;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    height: $button-height;
     letter-spacing: 1px;
-    line-height: $line-height;
-    margin: 0 0 20px 0;
+    line-height: $button-line-height;
+    margin: $button-margin;
     outline: none;
-    padding: 11px 20px;
+    padding: $button-padding;
     text-align: center;
     text-decoration: none;
-    width: 100%;
+    width: $button-width;
     -webkit-appearance: button;
 
-    @include border-radius(20px);
+    @include border-radius($button-radius);
 }
