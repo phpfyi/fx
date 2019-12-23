@@ -81,7 +81,7 @@ $line-height: 18px;
 
 ### Buttons
 
-Modify the following configuration to override button styles.
+Modify the following configuration to override button styles. This applies to buttons, submit and reset inputs.
 
 ```scss
 $button-background: $grey-xd;
@@ -157,7 +157,11 @@ $columns: 12;
 ...
 ```
 
-Using columns across breakpoints.
+Using columns with breakpoints.
+
+```scss
+$breakpoints: (...
+```
 
 ```css
 .col-1-xs /* 1/12 width at xs breakpoint */
@@ -172,6 +176,15 @@ Container elements can be used to create fixed centered elements with a variable
 
 ```css
 .container /* full width flex container */
+```
+
+Using containers with breakpoints.
+
+```scss
+$breakpoints: (...
+```
+
+```css
 .container-xs /* xs width centered flex container */
 .container-m /* m width centered flex container */
 ...
@@ -196,15 +209,33 @@ Use col classes on child elements of flex.
 
 ```css
 .flex /* flex child elements */
+```
+
+Using flex with breakpoints.
+
+```scss
+$breakpoints: (...
+```
+
+```css
 .flex-xs /* flex child elements at xs breakpoint */
 .flex-m /* flex child elements at m breakpoint */
 ...
 ```
 
-There is also a class to reverse the flex layout of child elements across breakpoints.
+There is also a class to reverse the flex layout of child elements.
 
 ```css
 .flex-reverse /* flex reverse child elements */
+```
+
+Using flex reverse with breakpoints.
+
+```scss
+$breakpoints: (...
+```
+
+```css
 .flex-reverse-xs /* flex reverse child elements at xs breakpoint */
 .flex-reverse-m /* flex reverse child elements at m breakpoint */
 ...
@@ -271,7 +302,15 @@ Used to align text elements across breakpoints.
 .txt-l /* aligns text left */
 .txt-r /* aligns text right */
 .txt-c /* aligns text center */
+```
 
+Using text align with breakpoints.
+
+```scss
+$breakpoints: (...
+```
+
+```css
 .txt-l-xs /* aligns text left at xs breakpoint */
 .txt-l-m /* aligns text left at m breakpoint */
 ...
