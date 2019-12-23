@@ -1,0 +1,11 @@
+{
+    "name": "phpfyi/fx",
+    "description": "FX - CSS Framework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Andrew Mc Cormack"
+        }
+    ],
+    "minimum-stability": "dev"
+}
