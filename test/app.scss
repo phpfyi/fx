@@ -1,18 +1,18 @@
-////////////////////////////////////////////////////////////////////////////////
-// app config
+// config
 @import "../app/config";
 
 // FX mixins
-@import "../src/functions";
-@import "../src/mixins";
+@import "../src/core";
+
 ////////////////////////////////////////////////////////////////////////////////
-// app
+
+// app mixins
 @import "../app/mixins/font-base";
 
-// reset
+// FX reset
 @import "../src/reset";
 
-// styles
+// app styles
 @import "../app/base/body";
 @import "../app/base/card";
 @import "../app/base/code";
