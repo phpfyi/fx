@@ -1,10 +1,4 @@
-/*------------------------------------------------------------------------------
- MIXINS
-------------------------------------------------------------------------------*/
-
-@import "functions/breakpoint";
-@import "functions/color";
-
+// mixins
 @import "mixins/animation";
 @import "mixins/appearance";
 @import "mixins/bg-color";
@@ -13,22 +7,18 @@
 @import "mixins/box-shadow";
 @import "mixins/box-sizing";
 @import "mixins/button";
-@import "mixins/circle";
+@import "mixins/color";
 @import "mixins/flex";
 @import "mixins/gradient-v";
 @import "mixins/hover-underline";
 @import "mixins/indent-hidden";
+@import "mixins/input";
 @import "mixins/keyframes";
 @import "mixins/min-width";
-@import "mixins/pad";
-@import "mixins/position-absolute";
-@import "mixins/position-fixed";
-@import "mixins/position-relative";
 @import "mixins/position";
-@import "mixins/prefix.scss";
+@import "mixins/prefix";
 @import "mixins/rotate";
-@import "mixins/scroll-x";
-@import "mixins/scroll-y";
-@import "mixins/square";
+@import "mixins/scroll";
+@import "mixins/shape";
 @import "mixins/transform";
 @import "mixins/transition";

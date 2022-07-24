@@ -1,7 +1,4 @@
-/*------------------------------------------------------------------------------
- RESET
-------------------------------------------------------------------------------*/
-
+// reset
 html,
 body,
 div,
@@ -83,12 +80,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 article,
@@ -102,18 +99,18 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: "";
-    content: none;
+  content: "";
+  content: none;
 }
