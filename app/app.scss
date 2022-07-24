@@ -1,8 +1,6 @@
-// mixins
-@import "mixins/font-base";
-
 // reset
-@import "fx/reset";
+@import "~fx/src/reset";
+@import "~fx/src/utilities";
 
 // styles
 @import "base/body";

@@ -1,4 +1,4 @@
-$column-width: 100 / $columns;
+$column-width: math.div(100, $columns);
 
 @each $breakpoint, $unit in $breakpoints {
     @media all and (min-width: $unit) {

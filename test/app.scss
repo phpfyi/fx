@@ -1,16 +1,18 @@
+@use "sass:math";
+
 // config
 @import "../app/config";
+@import "../app/mixins";
 
 // FX mixins
-@import "../src/core";
+@import "../src/functions";
+@import "../src/mixins";
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// app mixins
-@import "../app/mixins/font-base";
-
 // FX reset
 @import "../src/reset";
+@import "../src/utilities";
 
 // app styles
 @import "../app/base/body";

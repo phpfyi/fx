@@ -2,7 +2,7 @@
  vertical heights
 ------------------------------------------------------------------------------*/
 
-@each $increment in $height-increments {
+@each $increment in $heights {
     .vh-#{$increment} {
         height: unquote($increment + "vh");
     }
