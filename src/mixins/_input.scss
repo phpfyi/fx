@@ -3,7 +3,7 @@
     border: 1px solid #CCC;
     color: #000;
     display: block;
-    font-family: $body-font;
+    font-family: $font-body;
     font-size: 14px;
     line-height: 18px;
     margin: 0 0 10px 0;
@@ -14,7 +14,7 @@
     text-align: left;
     width: 100%;
 
-    @include apperance;
+    @include appearance;
     @include border-radius(4px);
     @include transition(background-color, 500ms, ease-in-out);
 

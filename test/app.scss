@@ -1,3 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////
+// app config
 @import "../app/config";
 
-@import "../app/app";
+// FX mixins
+@import "../src/functions";
+@import "../src/mixins";
+////////////////////////////////////////////////////////////////////////////////
+// app
+@import "../app/mixins/font-base";
+
+// reset
+@import "../src/reset";
+
+// styles
+@import "../app/base/body";
+@import "../app/base/card";
+@import "../app/base/code";
+@import "../app/base/form";
+@import "../app/base/heading";
+@import "../app/base/hr";
+@import "../app/base/_input-button";
+@import "../app/base/_input-checkbox";
+@import "../app/base/_input-radio";
+@import "../app/base/_input-select";
+@import "../app/base/_input-textarea";
+@import "../app/base/_input";
+@import "../app/base/_label";
+@import "../app/base/link";
+@import "../app/base/list";
+@import "../app/base/paragraph";
+@import "../app/base/table";
+@import "../app/base/text";

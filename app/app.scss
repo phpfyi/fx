@@ -2,10 +2,9 @@
 @import "mixins/font-base";
 
 // reset
-@import "../src/reset";
+@import "fx/reset";
 
 // styles
-@import "base/background";
 @import "base/body";
 @import "base/card";
 @import "base/code";
@@ -22,6 +21,5 @@
 @import "base/link";
 @import "base/list";
 @import "base/paragraph";
-@import "base/strong";
 @import "base/table";
 @import "base/text";

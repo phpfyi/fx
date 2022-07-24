@@ -8,7 +8,7 @@ input[type="password"] {
     @include input;
     @include border-radius(0px);
 
-    background: color('green-dark');
+    background: #FFF;
     border: 0px;
     border-bottom: 1px solid color("black");
     color: white;
@@ -30,19 +30,19 @@ input[type="range"] {
 
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: color('blue-medium');
+    color: #CCC;
 }
 ::-moz-placeholder {
     /* Firefox 19+ */
-    color: color('blue-medium');
+    color: #CCC;
 }
 :-ms-input-placeholder {
     /* IE 10+ */
-    color: color('blue-medium');
+    color: #CCC;
 }
 :-moz-placeholder {
     /* Firefox 18- */
-    color: color('blue-medium');
+    color: #CCC;
 }
 
 
@@ -115,23 +115,6 @@ input[type="range"] {
     display: block;
     font-size: 13px;
     font-style: italic;
-}
-
-::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: color('blue-m');
-}
-::-moz-placeholder {
-    /* Firefox 19+ */
-    color: color('blue-m');
-}
-:-ms-input-placeholder {
-    /* IE 10+ */
-    color: color('blue-m');
-}
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: color('blue-m');
 }
 
 
