@@ -1,0 +1,18 @@
+.relative {
+    position: relative;
+}
+
+.position-absolute {
+    margin: auto;
+    @include position-absolute(1, auto, auto, auto, auto);
+}
+
+.position-absolute-c {
+    margin: auto;
+    @include position-absolute(1, 0, 0, 0, 0);
+}
+
+.position-absolute-v {
+    margin: auto;
+    @include position-absolute(1, 0, auto, 0, auto);
+}

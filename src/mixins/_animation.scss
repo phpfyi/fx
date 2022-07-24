@@ -1,0 +1,3 @@
+@mixin animation($value) {
+    @include prefix(animation, $value);
+}

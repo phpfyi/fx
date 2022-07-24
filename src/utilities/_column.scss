@@ -1,0 +1,11 @@
+$column-width: 100 / $columns;
+
+@each $breakpoint, $unit in $breakpoints {
+    @media all and (min-width: $unit) {
+        @for $i from 1 through $columns {
+            .col-#{$i}#{$breakpoint} {
+                width: unquote($column-width * $i + "%");
+            }
+        }
+    }
+}

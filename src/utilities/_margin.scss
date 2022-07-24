@@ -1,0 +1,22 @@
+.mm {
+    margin: 10px;
+}
+
+@each $increment in $margins {
+    .mar-#{$increment} {
+        margin: unquote($increment + "px");
+    }
+}
+
+@each $increment in $margins {
+    .mar-h-#{$increment} {
+        margin-left: unquote($increment + "px");
+        margin-right: unquote($increment + "px");
+    }
+}
+@each $increment in $margins {
+    .mar-v-#{$increment} {
+        margin-bottom: unquote($increment + "px");
+        margin-top: unquote($increment + "px");
+    }
+}

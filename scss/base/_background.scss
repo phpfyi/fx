@@ -1,0 +1,31 @@
+.bg-green-light-linear {
+    background: linear-gradient(to left, #009243, #00b553);
+}
+
+.bg-green-medium-linear {
+    background: linear-gradient(to left, #007751, #009464);
+}
+
+.bg-green-dark-linear {
+    background: linear-gradient(to left, #00524a, #00685e);
+}
+
+.bg-blue-light-linear {
+    background: linear-gradient(to left, #0083b1, #0097cc);
+}
+
+.bg-blue-medium-linear {
+    background: linear-gradient(to left, #005573, #006d94);
+}
+
+.bg-blue-dark-linear {
+    background: linear-gradient(to left, #003c4e, #005068);
+}
+
+.bg-green-dark-radial {
+    background-image: radial-gradient(farthest-corner at 40px 40px, #005368 0%, #000 100%);
+}
+
+.bg-blue-dark-radial {
+    background-image: radial-gradient(farthest-corner at 40px 40px, #0097cc 0%, #000 100%);
+}

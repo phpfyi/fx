@@ -1,0 +1,7 @@
+$prefixes: ("-webkit-", "-moz-", "-ms-", "-o-", "");
+
+@mixin prefix($key, $value) {
+    @each $prefix in $prefixes {
+        #{$prefix}#{$key}: $value;
+    }
+}

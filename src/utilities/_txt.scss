@@ -1,0 +1,22 @@
+$alignments: (
+    "c": "center",
+    "l": "left",
+    "r": "right",
+);
+
+@each $letter, $alignment in $alignments {
+    .txt-#{$letter} {
+        text-align: unquote($alignment);
+    }
+}
+
+// @todo
+// @each $size, $breakpoint in $breakpoints {
+//     @media all and (min-width: $breakpoint) {
+//         @each $letter, $alignment in $alignments {
+//             .txt-#{$letter}#{$size} {
+//                 text-align: unquote($alignment);
+//             }
+//         }
+//     }
+// }

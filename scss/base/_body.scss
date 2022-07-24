@@ -1,0 +1,37 @@
+html,
+body,
+#app,
+.app {
+    @include square(100%);
+}
+
+html {
+    font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: none;
+    -webkit-text-size-adjust: 100%;
+
+    @include square(100%);
+}
+
+html * {
+    @include box-sizing;
+}
+
+body {
+    background-color: $white;
+    color: red;
+    font-family: $font-body;
+    font-size: 10px; // $font-size; @todo
+    font-weight: 500; // $font-weight;
+    line-height: 1.4; // $line-height;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+
+    @include square(100%);
+}

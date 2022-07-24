@@ -1,0 +1,19 @@
+$clear: (
+    "l": "left",
+    "r": "right",
+    "b": "both"
+);
+
+@each $letter, $text in $clear {
+    .c#{$letter} {
+        clear: unquote($text);
+    }
+}
+
+.ca {
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}

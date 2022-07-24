@@ -1,19 +1,78 @@
 # FX - CSS Framework
 
+FX is a lightweight SCSS framework with a grid system and set of utility classes for rapidly building UI's
+
 ![Code Language](https://img.shields.io/github/languages/top/phpfyi/fx)
 ![Code Size](https://img.shields.io/github/languages/code-size/phpfyi/fx)
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/phpfyi/fx)
 ![Latest Commit](https://img.shields.io/github/last-commit/phpfyi/fx)
 
-FX is a collection of CSS resets, classes, and mixins for rapidly building UI's across devices.
+---
 
-The goals of the project are as follows:
+## Installation
 
-* To create a set of reset rules that take into account accessibly and create a consistent experience across devices and screen sizes.
-* To create an extremely lightweight framework that is easy to extend.
-* To abstract out common CSS rules into re-usable classes.
-* To create a set of short but descriptive CSS classnames.
-* To minimise the amount of work and HTML required to build layouts.
+### NPM
+
+Add the FX framework as a dev dependency
+
+```console
+npm i https://github.com/phpfyi/fx --save-dev
+```
+
+Copy the core config file into your local project (adjust the destination to suit your project)
+
+```console
+cp node_modules/phpfyi/fx/_config.scss assets/scss/_config.scss
+```
+
+### Composer
+
+Require the FX framework package via composer.
+
+```console
+composer require phpfyi/fx
+```
+
+Copy the core config file into your local project (adjust the destination to suit your project)
+
+```console
+cp vendor/phpfyi/fx/_config.scss assets/scss/_config.scss
+```
+
+## File Setup
+
+### Import config and FX mixins
+
+The core config file should be imported before any other SCSS as it contains all the configuration for the grid, colour etc, followed by the FX mixins.
+
+For example if using Vue you can add the following to vue.config.js
+
+```javascript
+module.exports = {
+    css: {
+        loaderOptions: {
+            sass: {
+                additionalData: '@import "@/assets/scss/_config.scss";@import "phpfyi/fx/core/_mixins_.scss";',
+            },
+        },
+    },
+}
+```
+
+In you not using a framework simply import the config and mixins file at the top of your main scss file. (adjust the mixins path depending whether you are using NPM or composer)
+
+```scss
+@import "@/assets/scss/_config.scss";
+@import "phpfyi/fx/core/_mixins_.scss";
+```
+
+### Import the FX reset and classes
+
+```scss
+@import "phpfyi/fx/core/fx/reset";
+@import "phpfyi/fx/core/fx/classes";
+```
+
 
 ---
 
@@ -38,19 +97,6 @@ The goals of the project are as follows:
   - [Visibility](#visibility)
   - [Width](#width)
 
----
-
-## Installation
-
-Require the FX framework package via composer.
-
-```json
-{
-    "require": {
-        "phpfyi/fx": "1.0.*"
-    }
-}
-```
 
 Create a copy of the FX config file with your custom config and import the core FX files.
 

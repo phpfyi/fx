@@ -1,0 +1,10 @@
+$floats: (
+    "l": "left",
+    "r": "right"
+);
+
+@each $selector, $value in $floats {
+    .f#{$selector} {
+        float: unquote($value);
+    }
+}

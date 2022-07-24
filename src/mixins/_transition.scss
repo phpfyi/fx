@@ -1,0 +1,3 @@
+@mixin transition($property: all, $time: 500ms, $method: ease-in-out) {
+    @include prefix(transition, $property $time $method);
+}

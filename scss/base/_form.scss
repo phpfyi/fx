@@ -1,0 +1,17 @@
+form {
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.form-element {
+    padding-bottom: 12px;
+    @include position-relative;
+}
+
+.form-messages {
+    color: #f46262;
+    font-size: 14px;
+    padding: 5px 0;
+}

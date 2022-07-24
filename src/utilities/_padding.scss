@@ -1,0 +1,23 @@
+.pp {
+    padding: 10px;
+}
+
+@each $increment in $padding {
+    .pad-#{$increment} {
+        padding: unquote($increment + "px");
+    }
+}
+
+@each $increment in $padding {
+    .pad-h-#{$increment} {
+        padding-left: unquote($increment + "px");
+        padding-right: unquote($increment + "px");
+    }
+}
+
+@each $increment in $padding {
+    .pad-v-#{$increment} {
+        padding-bottom: unquote($increment + "px");
+        padding-top: unquote($increment + "px");
+    }
+}

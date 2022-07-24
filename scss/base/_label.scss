@@ -1,0 +1,31 @@
+label {
+    display: block;
+    font-family: $font-body;
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: $line-height;
+    margin: 0 0 0 0;
+    padding: 10px 0;
+    text-align: left;
+    @include position-absolute(1, 0, 0, auto, auto);
+
+    .label-content {
+        display: none;
+    }
+
+    .required {
+        color: red;
+        font-size: 20px;
+    }
+}
+
+label {
+    color: $black;
+    display: block;
+    font-size: 90%;
+    font-weight: 700;
+    line-height: $line-height;
+    margin: 0 0 0 0;
+    padding: 0 0 6px 0;
+    text-align: left;
+}

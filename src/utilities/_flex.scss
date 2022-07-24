@@ -1,0 +1,23 @@
+.flex-fill {
+    flex: 1;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-shrink {
+    margin-left: auto;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+@each $size, $breakpoint in $breakpoints {
+    @media all and (min-width: $breakpoint) {
+        .flex#{$size} {
+            @include flex;
+        }
+    }
+}

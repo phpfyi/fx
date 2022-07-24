@@ -1,0 +1,6 @@
+.card {
+    background-color: white;
+    overflow: hidden;
+    @include border-radius(4px);
+    @include box-shadow(0, 0, 2px, color('black'));
+}

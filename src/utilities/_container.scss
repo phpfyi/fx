@@ -1,0 +1,14 @@
+.container {
+    margin: 0 auto;
+    max-width: $container-max;
+    width: 100%;
+    @include flex;
+}
+
+@each $size, $breakpoint in $breakpoints {
+    @media all and (min-width: $breakpoint) {
+        .container-#{$size} {
+            max-width: $breakpoint;
+        }
+    }
+}

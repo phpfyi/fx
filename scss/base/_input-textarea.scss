@@ -1,0 +1,14 @@
+textarea {
+  @include input;
+  @include border-radius(0px);
+
+  border: 0px;
+  border-bottom: 1px solid color("black");
+  min-height: 100px;
+  overflow: auto;
+  resize: vertical;
+  background: transparent;
+  color: white;
+  padding-left: 0;
+  width: 100%;
+}

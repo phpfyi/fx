@@ -1,0 +1,13 @@
+$scroll-prefixes: ("-ms-", "");
+
+@mixin scroll-x {
+  @each $prefix in $scroll-prefixes {
+    #{$prefix}overflow-x: scroll;
+  }
+}
+
+@mixin scroll-y {
+  @each $prefix in $scroll-prefixes {
+    #{$prefix}overflow-y: scroll;
+  }
+}

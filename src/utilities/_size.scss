@@ -1,0 +1,17 @@
+@each $increment in $heights {
+    .h-#{$increment} {
+        height: unquote($increment + "%");
+    }
+}
+
+@each $increment in $heights {
+    .vh-#{$increment} {
+        height: unquote($increment + "vh");
+    }
+}
+
+@each $increment in $widths {
+    .w-#{$increment} {
+        width: unquote($increment + "%");
+    }
+}

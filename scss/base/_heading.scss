@@ -1,0 +1,164 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $font-heading;
+    font-size: 100%;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+h1,
+.h1 {
+    font-size: 54px;
+    line-height: 60px;;
+}
+
+h2,
+.h2 {
+    font-size: 44px;
+    padding: 0 0 0.2em 0;
+}
+
+h3,
+.h3 {
+    font-size: 36px;
+    margin-bottom: 6px;
+    padding: 5px 0;
+}
+
+h4,
+.h4 {
+    font-size: 30px;
+    margin-bottom: 6px;
+    padding: 3px 0;
+}
+
+h5,
+.h5 {
+    font-size: 24px;
+    margin-bottom: 4px;
+    padding: 0 0;
+}
+
+h6,
+.h6 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    padding: 0 0;
+}
+
+/*------------------------------------------------------------------------------
+ heading style reset
+------------------------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black;
+    font-family: $heading-font;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+}
+
+h1 {
+    font-size: 220%;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+h2 {
+    font-size: 180%;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 150%;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 130%;
+}
+
+h5 {
+    font-size: 120%;
+}
+
+h6 {
+    font-size: 110%;
+}
+
+
+/*
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $font-heading;
+    font-size: 100%;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    padding: 10px 0;
+}
+
+.h1 {
+    font-size: 54px;
+    line-height: 60px;;
+}
+
+.h2 {
+    font-size: 44px;
+    padding: 0 0 0.2em 0;
+}
+
+.h3 {
+    font-size: 36px;
+    margin-bottom: 6px;
+    padding: 5px 0;
+}
+
+.h4 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 6px;
+    padding: 5px 0 10px;
+}
+
+.h5 {
+    font-size: 24px;
+    margin-bottom: 4px;
+    padding: 0 0;
+}
+
+.h6 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    padding: 0 0;
+}
+*/
+/*
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+*/
