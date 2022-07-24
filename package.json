@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/phpfyi/fx/issues"
   },
-  "homepage": "https://github.com/phpfyi/fx#readme"
+  "homepage": "https://github.com/phpfyi/fx#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
 }

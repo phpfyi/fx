@@ -55,9 +55,9 @@ module.exports = {
                 additionalData: `
                     @use "sass:math";
                     @import "@/assets/scss/_config.scss"; 
-                    @import "@/assets/scss/_mixins_.scss"; 
+                    @import "@/assets/scss/_mixins.scss"; 
                     @import "~fx/src/_functions.scss";
-                    @import "~fx/src/_mixins_.scss";
+                    @import "~fx/src/_mixins.scss";
                 `,
             },
         },
