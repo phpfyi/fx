@@ -1,8 +1,8 @@
 @use "sass:math";
 
 // config
-@import "../app/config";
-@import "../app/mixins";
+@import "../src/core/config";
+@import "../src/core/mixins";
 
 // FX mixins
 @import "../src/functions";
@@ -15,21 +15,21 @@
 @import "../src/utilities";
 
 // app styles
-@import "../app/base/body";
-@import "../app/base/card";
-@import "../app/base/code";
-@import "../app/base/form";
-@import "../app/base/heading";
-@import "../app/base/hr";
-@import "../app/base/_input-button";
-@import "../app/base/_input-checkbox";
-@import "../app/base/_input-radio";
-@import "../app/base/_input-select";
-@import "../app/base/_input-textarea";
-@import "../app/base/_input";
-@import "../app/base/_label";
-@import "../app/base/link";
-@import "../app/base/list";
-@import "../app/base/paragraph";
-@import "../app/base/table";
-@import "../app/base/text";
+@import "../src/core/app/body";
+@import "../src/core/app/card";
+@import "../src/core/app/code";
+@import "../src/core/app/form";
+@import "../src/core/app/heading";
+@import "../src/core/app/hr";
+@import "../src/core/app/_input-button";
+@import "../src/core/app/_input-checkbox";
+@import "../src/core/app/_input-radio";
+@import "../src/core/app/_input-select";
+@import "../src/core/app/_input-textarea";
+@import "../src/core/app/_input";
+@import "../src/core/app/_label";
+@import "../src/core/app/link";
+@import "../src/core/app/list";
+@import "../src/core/app/paragraph";
+@import "../src/core/app/table";
+@import "../src/core/app/text";

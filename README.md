@@ -79,6 +79,7 @@ In you not using a framework simply import the config and mixins file at the top
 @import "phpfyi/fx/core/fx/classes";
 ```
 
+cp -R  node_modules/fx/src/core src/assets/scss
 
 ---
 
