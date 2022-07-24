@@ -53,7 +53,6 @@ module.exports = {
         loaderOptions: {
             sass: {
                 additionalData: `
-                    @use "sass:math";
                     @import "@/assets/scss/_config.scss"; 
                     @import "@/assets/scss/_mixins.scss"; 
                     @import "~fx/src/_functions.scss";

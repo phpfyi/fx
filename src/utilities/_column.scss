@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $column-width: math.div(100, $columns);
 
 @each $breakpoint, $unit in $breakpoints {
