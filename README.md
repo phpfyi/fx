@@ -8,6 +8,18 @@ FX is a lightweight SCSS framework with a grid system and set of utility classes
 ![Latest Commit](https://img.shields.io/github/last-commit/phpfyi/fx)
 
 ---
+- [Installation](#installation)
+  - [NPM](#npm)
+  - [Composer](#composer)
+- [Global Styles](#global-styles)
+  - [Manual](#manual)
+  - [Vue](#vue)
+- [App Styles](#app-styles)
+- [Configuration](#configuration)
+- [FX mixins](#fx-mixins)
+- [FX utilities](#fx-utilities)
+
+---
 
 ## Installation
 
@@ -19,10 +31,10 @@ Add the FX framework as a dev dependency
 npm i https://github.com/phpfyi/fx --save-dev
 ```
 
-Copy the core config file into your local project (adjust the destination to suit your project)
+Copy the FX core files into your local SASS folder (adjust the destination to suit your project)
 
 ```console
-cp node_modules/phpfyi/fx/_config.scss assets/scss/_config.scss
+cp -R  node_modules/fx/src/core src/assets/scss
 ```
 
 ### Composer
@@ -33,19 +45,28 @@ Require the FX framework package via composer.
 composer require phpfyi/fx
 ```
 
-Copy the core config file into your local project (adjust the destination to suit your project)
+Copy the FX core files into your local SASS folder (adjust the destination to suit your project)
 
 ```console
-cp vendor/phpfyi/fx/_config.scss assets/scss/_config.scss
+cp -R  vendor/phpfyi/fx/src/core src/assets/scss
 ```
 
-## File Setup
+## Global Styles
 
-### Import config and FX mixins
+### Manual
 
-The core config file should be imported before any other SCSS as it contains all the configuration for the grid, colour etc, followed by the FX mixins.
+FX requires 4 files to be loaded globally before any other SCSS. Your application configuration and mixins (generated from the cp command above), and the FX functions and mixins.
 
-For example if using Vue you can add the following to vue.config.js
+```scss
+@import "@/assets/scss/_config.scss"; 
+@import "@/assets/scss/_mixins.scss"; 
+@import "~fx/src/_functions.scss";
+@import "~fx/src/_mixins.scss";
+```
+
+### Vue
+
+If using Vue you can add the following to vue.config.js
 
 ```javascript
 module.exports = {
@@ -64,111 +85,185 @@ module.exports = {
 }
 ```
 
-In you not using a framework simply import the config and mixins file at the top of your main scss file. (adjust the mixins path depending whether you are using NPM or composer)
+## App Styles
+
+After running the cp command an app.scss file is created with the following imports. These provide a CSS reset, access to the FX utility classes, and a scaffold to quickly customize key CSS styling.
 
 ```scss
-@import "@/assets/scss/_config.scss";
-@import "phpfyi/fx/core/_mixins_.scss";
+// fx
+@import "~fx/src/reset";
+@import "~fx/src/utilities";
+
+// app
+@import "app/body";
+@import "app/card";
+@import "app/code";
+@import "app/form";
+@import "app/heading";
+@import "app/hr";
+@import "app/_input-button";
+@import "app/_input-checkbox";
+@import "app/_input-radio";
+@import "app/_input-select";
+@import "app/_input-textarea";
+@import "app/_input";
+@import "app/_label";
+@import "app/link";
+@import "app/list";
+@import "app/paragraph";
+@import "app/table";
+@import "app/text";
 ```
 
-### Import the FX reset and classes
+## Configuration
+
+The _config.scss file is used both in FX SCSS files and you app SCSS files to create things like the grid system and default styles.
 
 ```scss
-@import "phpfyi/fx/core/fx/reset";
-@import "phpfyi/fx/core/fx/classes";
-```
+////////////////////////////////////////////////////////////////////////////////
+// GRID
+////////////////////////////////////////////////////////////////////////////////
 
-cp -R  node_modules/fx/src/core src/assets/scss
-
----
-
-- [Installation](#installation)
-- [CSS Reset](#css-reset)
-  - [Fonts](#fonts)
-  - [Buttons](#buttons)
-- [CSS Classes](#css-classes)
-  - [Breakpoints](#breakpoints)
-  - [Alignment](#alignment)
-  - [Clear](#clear)
-  - [Columns](#columns)
-  - [Container](#container)
-  - [Display](#display)
-  - [Flex](#flex)
-  - [Float](#float)
-  - [Margin](#margin)
-  - [Padding](#padding)
-  - [Position](#position)
-  - [Text Align](#text-align)
-  - [Vertical Height](#vertical-height)
-  - [Visibility](#visibility)
-  - [Width](#width)
-
-
-Create a copy of the FX config file with your custom config and import the core FX files.
-
-If you wish to import specific parts of the framework please see the individual imported mixins, reset, and classes files.
-
-```scss
-@import 'config';
-
-@import 'vendor/phpfyi/fx/core/mixins';
-@import 'vendor/phpfyi/fx/core/reset';
-@import 'vendor/phpfyi/fx/core/classes';
-```
-
----
-
-## CSS Reset
-
-The FX framework contains sensible resets for common elements such as form elements and allows overriding the default configuration
-
-### Fonts
-
-Modify the following configuration to override global font styles.
-
-```scss
-$font-size: 14px;
-$line-height: 18px;
-```
-
-### Buttons
-
-Modify the following configuration to override button styles. This applies to buttons, submit and reset inputs.
-
-```scss
-$button-background: $grey-xd;
-$button-border: 0px;
-$button-color: $white;
-$button-font: $body-font;
-$button-font-size: 14px;
-$button-font-weight: 600;
-$button-height: 40px;
-$button-line-height: 18px;
-$button-margin: 0 0 20px 0;
-$button-padding: 11px 20px;
-$button-radius: 20px;
-$button-width: 100%;
-```
-
----
-
-## CSS Classes
-
-### Breakpoints
-
-The default breakpoint config is as follows and is appended to certain CSS classes to make them responsive.
-Can be overidden with custom config.
-
-```scss
 $breakpoints: (
-    "-xs": 480px,
-    "-s": 600px,
-    "-m": 768px,
-    "-l": 960px,
-    "-xl": 1200px,
-    "-xxl": 1360px
+  "": 0px,
+  "-xs": 480px,
+  "-s": 600px,
+  "-m": 768px,
+  "-l": 960px,
+  "-xl": 1200px,
+  "-xxl": 1360px,
 );
+
+$columns: 12;
+
+$container-max: 1220px;
+
+////////////////////////////////////////////////////////////////////////////////
+// FONT
+////////////////////////////////////////////////////////////////////////////////
+
+$font-heading: "Lato", sans-serif;
+$font-body: "Lato", sans-serif;
+$font-code: monospace;
+
+$font-family: $font-body;
+$font-size: 18px;
+$font-weight: 400;
+$line-height: 28px;
+
+$font-weights: (300, 400, 500, 600, 700);
+
+////////////////////////////////////////////////////////////////////////////////
+// COLORS
+////////////////////////////////////////////////////////////////////////////////
+
+$colors: (
+   "black": #000,
+   "white": #fff,
+   "grey-xxl": #F7F7F7,
+   "grey-xl": #ececec,
+   "grey-l": #CCC,
+   "grey-m": #999,
+   "grey-d": #666,
+   "grey-xd": #333,
+   "grey-xxd": #232323,
+   "grey-xxxd": #171717,
+);
+
+////////////////////////////////////////////////////////////////////////////////
+// IMAGES
+////////////////////////////////////////////////////////////////////////////////
+
+$img: "/img/";
+
+////////////////////////////////////////////////////////////////////////////////
+// BOX
+////////////////////////////////////////////////////////////////////////////////
+
+$padding: (0, 5, 10, 15, 20, 25, 30, 40, 50);
+
+$margins: (0, 5, 10, 15, 20, 25);
+
+$widths: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+
+$heights: (0, 20, 40, 60, 80, 100);
+
+////////////////////////////////////////////////////////////////////////////////
+// POSITION
+////////////////////////////////////////////////////////////////////////////////
+
+$z-indexes: (0, 1, 2, 3, 4, 5);
 ```
+
+## FX mixins
+
+FX provides handy mixins to streamline workflow and cut out a lot of boilerplate code. A number of these mixins will add required cross browser prefixes as well as validate passed values against your configuration. e.g colors are present in the $colors array.
+
+***See src/mixins for more detail and the generated CSS***
+
+```scss
+@mixin animation($value)
+
+@mixin appearance($value: none)
+
+@mixin bg-color($color)
+
+@mixin bg-opacity($color)
+
+@mixin border-radius($size)
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 2px, $color: #666)
+
+@mixin box-sizing($value: border-box)
+
+@mixin button
+
+@mixin color($color)
+
+@mixin flex 
+
+@mixin gradient-v($from: 0%, $start: '#FFF', $to: 100%, $stop: #000)
+
+@mixin hover-underline
+
+@mixin indent-hidden
+
+@mixin input
+
+@mixin keyframes($name)
+
+@mixin min-width($breakpoint: "")
+
+@mixin position($position: absolute, $z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
+
+@mixin position-relative($z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
+
+@mixin position-fixed($z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
+
+@mixin position-absolute($z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
+
+@mixin prefix($key, $value)
+
+@mixin rotate($degrees)
+
+@mixin scroll-x 
+
+@mixin scroll-y
+
+@mixin square($size)
+
+@mixin circle($size) 
+
+@mixin transform($value)
+
+@mixin transition($property: all, $time: 500ms, $method: ease-in-out)
+```
+
+
+
+
+
+
 
 ### Alignment
 
