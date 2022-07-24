@@ -13,10 +13,8 @@ FX is a lightweight SCSS framework with a grid system and set of utility classes
   - [Composer](#composer)
   - [Generated files](#generated-files)
   - [Required Imports](#required-imports)
-  - [_config.scss File](#_config.scss-file)
-  - [app.scss File](#app.scss-file)
-- [Configuration](#configuration)
-- [App Styles](#app-styles)
+  - [_config.scss File](#_configscss-file)
+  - [app.scss File](#appscss-file)
 - [FX Mixins](#fx-mixins)
 - [FX Utilities](#fx-utilities)
 
@@ -318,20 +316,20 @@ FX provides handy mixins to streamline workflow and cut out a lot of boilerplate
 
 .mm // 10px margin
 .mar-10 // margin by size
-.mar-h-10 // horizontal margin by size
-.mar-v-10 // vertical margin by size
+.mar-10-h // horizontal margin by size
+.mar-10-v // vertical margin by size
 
 .overflow-hidden // hide overflow
 
 .pp // 10px padding
 .pad-10 // padding by size
-.pad-h-10 // horizontal padding by size
-.pad-v-10 // vertical padding by size
+.pad-10-h // horizontal padding by size
+.pad-10-v // vertical padding by size
 
 .relative // relative position
-.position-absolute // absolute position
-.position-absolute-c // absolute position and centered
-.position-absolute-v // absolute position and centered vertically
+.absolute // absolute position
+.absolute-c // absolute position and centered
+.absolute-v // absolute position and centered vertically
 
 .h-100 // height by percent
 .vh-100 // vertical height by percent
@@ -344,11 +342,30 @@ FX provides handy mixins to streamline workflow and cut out a lot of boilerplate
 .txt-l // left aligned text
 .txt-r // right aligned text
 
-.hover-underline // underline on hover
-.no-underline // remove text decoration
+.underline-hover // underline on hover
+.underline-none // remove text decoration
 
 .invisible // visibility hidden
 .visible // visibility visible
 
 .z-1 // z-index from $z-indexes config
+```
+
+### Legacy
+
+Renamed in v2
+
+```scss
+.position-absolute // absolute position
+.position-absolute-c // absolute position and centered
+.position-absolute-v // absolute position and centered vertically
+
+.mar-h-10 // horizontal padding by size
+.mar-v-10 // vertical padding by size
+
+.pad-h-10 // horizontal padding by size
+.pad-v-10 // vertical padding by size
+
+.hover-underline // underline on hover
+.no-underline // remove text decoration
 ```
