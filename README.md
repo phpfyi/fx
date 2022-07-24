@@ -7,18 +7,17 @@ FX is a lightweight SCSS framework with a grid system and set of utility classes
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/phpfyi/fx)
 ![Latest Commit](https://img.shields.io/github/last-commit/phpfyi/fx)
 
----
 - [Installation](#installation)
   - [NPM](#npm)
   - [Composer](#composer)
-  - [Generated files](#generated-files)
-  - [Required Imports](#required-imports)
+- [Generated files](#generated-files)
   - [_config.scss File](#_configscss-file)
   - [app.scss File](#appscss-file)
+- [Importing Global Styles](#importing-global-styles)
+  - [Manually](#manually)
+  - [Vue](#vue)
 - [FX Mixins](#fx-mixins)
 - [FX Utilities](#fx-utilities)
-
----
 
 ## Installation
 
@@ -50,51 +49,15 @@ Copy the FX core files into your local SASS folder (adjust the destination to su
 cp -R  vendor/phpfyi/fx/src/core src/assets/scss
 ```
 
-### Generated files
+## Generated files
 
 After running the cp command a number of files and folders are generated
 
-- ***app.scss*** - main app SCSS file
-- ***_config.scss*** - var configuration file
-- ***_mixins.scss*** - mixin imports files
-- ***app/*** - app imports
-- ***mixins/*** - app mixins
-
-### Required Imports
-
-FX requires 4 files to be loaded globally before any other SCSS. Your application configuration and mixins (generated from the cp command above), and the FX functions and mixins.
-
-#### Manual
-
-You can import these manually if required.
-
-```scss
-@import "@/assets/scss/_config.scss"; 
-@import "@/assets/scss/_mixins.scss"; 
-@import "~fx/src/_functions.scss";
-@import "~fx/src/_mixins.scss";
-```
-
-#### Vue
-
-If using Vue you can add the following to vue.config.js
-
-```javascript
-module.exports = {
-    css: {
-        loaderOptions: {
-            sass: {
-                additionalData: `
-                    @import "@/assets/scss/_config.scss"; 
-                    @import "@/assets/scss/_mixins.scss"; 
-                    @import "~fx/src/_functions.scss";
-                    @import "~fx/src/_mixins.scss";
-                `,
-            },
-        },
-    },
-}
-```
+- **app.scss** - main app SCSS file
+- **_config.scss** - var configuration file
+- **_mixins.scss** - mixin imports files
+- **app/** - app imports
+- **mixins/** - app mixins
 
 ### _config.scss File
 
@@ -176,7 +139,7 @@ $heights: (0, 20, 40, 60, 80, 100);
 $z-indexes: (0, 1, 2, 3, 4, 5);
 ```
 
-## app.scss File
+### app.scss File
 
 The app.scss file is created with the following imports. These provide a CSS reset, access to the FX utility classes, and a scaffold to quickly customize key CSS styling.
 
@@ -206,11 +169,47 @@ The app.scss file is created with the following imports. These provide a CSS res
 @import "app/text";
 ```
 
+## Importing Global Styles
+
+FX requires 4 files to be loaded globally before any other SCSS. Your application configuration and mixins (generated from the cp command above), and the FX functions and mixins.
+
+### Manually
+
+You can import these manually if required.
+
+```scss
+@import "@/assets/scss/_config.scss"; 
+@import "@/assets/scss/_mixins.scss"; 
+@import "~fx/src/_functions.scss";
+@import "~fx/src/_mixins.scss";
+```
+
+### Vue
+
+If using Vue you can add the following to vue.config.js
+
+```javascript
+module.exports = {
+    css: {
+        loaderOptions: {
+            sass: {
+                additionalData: `
+                    @import "@/assets/scss/_config.scss"; 
+                    @import "@/assets/scss/_mixins.scss"; 
+                    @import "~fx/src/_functions.scss";
+                    @import "~fx/src/_mixins.scss";
+                `,
+            },
+        },
+    },
+}
+```
+
 ## FX Mixins
 
 FX provides handy mixins to streamline workflow and cut out a lot of boilerplate code. A number of these mixins will add required cross browser prefixes as well as validate passed values against your configuration. e.g colors are present in the $colors array.
 
-***See src/mixins for more detail and the generated CSS***
+**See src/mixins/ for all the mixins files**
 
 ```scss
 @mixin animation($value)
@@ -264,6 +263,10 @@ FX provides handy mixins to streamline workflow and cut out a lot of boilerplate
 ```
 
 ## FX Utilities
+
+The utility classes allow you to quickly style elements without having to add a lot of custom classes and selectors.
+
+**See src/utilities/ for all the utility files**
 
 ```scss
 .align-h // align horizontal
