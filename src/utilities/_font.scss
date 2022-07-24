@@ -1,70 +1,23 @@
-// @todo
-
 .font {
-    &-uppercase {
-        text-transform: uppercase;
-    }
-    &-medium {
-        font-size: 22px;
-        line-height: 30px;
-    }
-    &-large {
-        font-size: 28px;
-        line-height: 40px;
-    }
-    &-xlarge {
-        font-size: 36px;
-        line-height: 60px;
-    }
-    &-bold {
-        font-weight: 600;
-    }
-}
-
-.weight-600 {
-    font-weight: 600;
-}
-
-.uppercase {
+  &-body {
+    font-family: $font-body;
+  }
+  &-heading {
+    font-family: $font-heading;
+  }
+  &-code {
+    font-family: $font-code;
+  }
+  &-uppercase {
     text-transform: uppercase;
-}
-
-.italic {
+  }
+  &-italic {
     font-style: italic;
-}
-
-.font {
-    &-body {
-        font-family: $font-body;
-    }
-    &-heading {
-        font-family: $font-heading;
-    }
-    &-code {
-        font-family: $font-code;
-    }
-}
-
-.font {
-    &-body {
-        font-family: $font-body;
-    }
-    &-heading {
-        font-family: $font-heading;
-    }
-    &-code {
-        font-family: $font-code;
-    }
-    &-uppercase {
-        text-transform: uppercase;
-    }
-    &-italic {
-        font-style: italic;
-    }
+  }
 }
 
 @each $weight in $font-weights {
-    .font-#{$weight} {
-        font-weight: $weight;
-    }
+  .font-#{$weight} {
+    font-weight: $weight;
+  }
 }

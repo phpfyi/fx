@@ -11,13 +11,14 @@ FX is a lightweight SCSS framework with a grid system and set of utility classes
 - [Installation](#installation)
   - [NPM](#npm)
   - [Composer](#composer)
-- [Global Styles](#global-styles)
-  - [Manual](#manual)
-  - [Vue](#vue)
-- [App Styles](#app-styles)
+  - [Generated files](#generated-files)
+  - [Required Imports](#required-imports)
+  - [_config.scss File](#_config.scss-file)
+  - [app.scss File](#app.scss-file)
 - [Configuration](#configuration)
-- [FX mixins](#fx-mixins)
-- [FX utilities](#fx-utilities)
+- [App Styles](#app-styles)
+- [FX Mixins](#fx-mixins)
+- [FX Utilities](#fx-utilities)
 
 ---
 
@@ -51,11 +52,23 @@ Copy the FX core files into your local SASS folder (adjust the destination to su
 cp -R  vendor/phpfyi/fx/src/core src/assets/scss
 ```
 
-## Global Styles
+### Generated files
 
-### Manual
+After running the cp command a number of files and folders are generated
+
+- ***app.scss*** - main app SCSS file
+- ***_config.scss*** - var configuration file
+- ***_mixins.scss*** - mixin imports files
+- ***app/*** - app imports
+- ***mixins/*** - app mixins
+
+### Required Imports
 
 FX requires 4 files to be loaded globally before any other SCSS. Your application configuration and mixins (generated from the cp command above), and the FX functions and mixins.
+
+#### Manual
+
+You can import these manually if required.
 
 ```scss
 @import "@/assets/scss/_config.scss"; 
@@ -64,7 +77,7 @@ FX requires 4 files to be loaded globally before any other SCSS. Your applicatio
 @import "~fx/src/_mixins.scss";
 ```
 
-### Vue
+#### Vue
 
 If using Vue you can add the following to vue.config.js
 
@@ -85,37 +98,7 @@ module.exports = {
 }
 ```
 
-## App Styles
-
-After running the cp command an app.scss file is created with the following imports. These provide a CSS reset, access to the FX utility classes, and a scaffold to quickly customize key CSS styling.
-
-```scss
-// fx
-@import "~fx/src/reset";
-@import "~fx/src/utilities";
-
-// app
-@import "app/body";
-@import "app/card";
-@import "app/code";
-@import "app/form";
-@import "app/heading";
-@import "app/hr";
-@import "app/_input-button";
-@import "app/_input-checkbox";
-@import "app/_input-radio";
-@import "app/_input-select";
-@import "app/_input-textarea";
-@import "app/_input";
-@import "app/_label";
-@import "app/link";
-@import "app/list";
-@import "app/paragraph";
-@import "app/table";
-@import "app/text";
-```
-
-## Configuration
+### _config.scss File
 
 The _config.scss file is used both in FX SCSS files and you app SCSS files to create things like the grid system and default styles.
 
@@ -195,7 +178,37 @@ $heights: (0, 20, 40, 60, 80, 100);
 $z-indexes: (0, 1, 2, 3, 4, 5);
 ```
 
-## FX mixins
+## app.scss File
+
+The app.scss file is created with the following imports. These provide a CSS reset, access to the FX utility classes, and a scaffold to quickly customize key CSS styling.
+
+```scss
+// fx
+@import "~fx/src/reset";
+@import "~fx/src/utilities";
+
+// app
+@import "app/body";
+@import "app/card";
+@import "app/code";
+@import "app/form";
+@import "app/heading";
+@import "app/hr";
+@import "app/_input-button";
+@import "app/_input-checkbox";
+@import "app/_input-radio";
+@import "app/_input-select";
+@import "app/_input-textarea";
+@import "app/_input";
+@import "app/_label";
+@import "app/link";
+@import "app/list";
+@import "app/paragraph";
+@import "app/table";
+@import "app/text";
+```
+
+## FX Mixins
 
 FX provides handy mixins to streamline workflow and cut out a lot of boilerplate code. A number of these mixins will add required cross browser prefixes as well as validate passed values against your configuration. e.g colors are present in the $colors array.
 
@@ -207,13 +220,11 @@ FX provides handy mixins to streamline workflow and cut out a lot of boilerplate
 @mixin appearance($value: none)
 
 @mixin bg-color($color)
-
 @mixin bg-opacity($color)
 
 @mixin border-radius($size)
 
 @mixin box-shadow($x: 0, $y: 0, $blur: 2px, $color: #666)
-
 @mixin box-sizing($value: border-box)
 
 @mixin button
@@ -235,11 +246,8 @@ FX provides handy mixins to streamline workflow and cut out a lot of boilerplate
 @mixin min-width($breakpoint: "")
 
 @mixin position($position: absolute, $z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
-
 @mixin position-relative($z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
-
 @mixin position-fixed($z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
-
 @mixin position-absolute($z-index: 0, $top: auto, $right: auto, $bottom: auto, $left: auto)
 
 @mixin prefix($key, $value)
@@ -247,11 +255,9 @@ FX provides handy mixins to streamline workflow and cut out a lot of boilerplate
 @mixin rotate($degrees)
 
 @mixin scroll-x 
-
 @mixin scroll-y
 
 @mixin square($size)
-
 @mixin circle($size) 
 
 @mixin transform($value)
@@ -259,245 +265,90 @@ FX provides handy mixins to streamline workflow and cut out a lot of boilerplate
 @mixin transition($property: all, $time: 500ms, $method: ease-in-out)
 ```
 
-
-
-
-
-
-
-### Alignment
-
-Align flex and non flex elements.
-
-```css
-.align-c /* flex align items to center */
-.align-v /* flex align items vertically */
-.align-h /* align element horizontally */
-.align-h-r /* flex align items horizontally and to the right */
-```
-
-### Clear
-
-Used to clear floated elements.
-
-```css
-.cl /* clear left */
-.cr /* clear right */
-.cb /* clear both */
-```
-
-### Columns
-
-Used to create column layouts.
-Columns should be inside an element with a container class (or another flex element)
-
-Configure using $columns
+## FX Utilities
 
 ```scss
-$columns: 12;
-```
+.align-h // align horizontal
 
-```css
-.col-1 /* 1/12 width */
-.col-6 /* 1/2 width */
-.col-12 /* 100% width */
-...
-```
+.box-shadow // add box shadow
 
-Using columns with breakpoints.
+.cl // clear left
+.cr // clear right
+.cb // clear both
+.ca // clear after
 
-```scss
-$breakpoints: (...
-```
+.col-12 // columns
+.col-12-m // columns at breakpoint
 
-```css
-.col-1-xs /* 1/12 width at xs breakpoint */
-.col-6-m /* 1/2 width at m breakpoint  */
-.col-12-xl /* 100% width at xl breakpoint  */
-...
-```
+.container // container
+.container-s // container max-width is breakpoint
 
-### Container
+.block // display block
+.inline // display inline
+.inline-block // display inline-block
+.hide // display none
 
-Container elements can be used to create fixed centered elements with a variable number of child columns.
+.flex-items-c // align inner items center
+.flex-items-h // align inner items horizontal
+.flex-items-v // align inner items vertical
+.flex-items-end // align inner items to end
 
-```css
-.container /* full width flex container */
-```
+.flex-reverse // reverse direction
+.flex-reverse-m // reverse direction at breakpoint
 
-Using containers with breakpoints.
+.flex-fill // flex 1
+.flex-grow // flex grow
+.flex-shrink // dont't stretch
+.flex-column // flex direction column
 
-```scss
-$breakpoints: (...
-```
+.flex // display flex
+.flex-m // display flex at breakpoint
 
-```css
-.container-xs /* xs width centered flex container */
-.container-m /* m width centered flex container */
-...
-```
+.fl // float left
+.fr // float right
 
-### Display
+.font-body // $font-body style
+.font-heading // $font-heading style
+.font-code // $font-code style
+.font-uppercase // uppercase text
+.font-italic // italic text
+.font-600 // font weight
 
-Display classes can show / hide elements based on the CSS display / visibility rules.
+.img-stretch // file height and width
 
-```css
-.block /* display block */
-.inline /* display inline */
-.inline-block /* display inline-block */
-.hide /* display none */
-```
+.mm // 10px margin
+.mar-10 // margin by size
+.mar-h-10 // horizontal margin by size
+.mar-v-10 // vertical margin by size
 
-### Flex
+.overflow-hidden // hide overflow
 
-Used to turn an element into a flex container for child elements.
-Container classes already have flex rules applied.
-Use col classes on child elements of flex.
+.pp // 10px padding
+.pad-10 // padding by size
+.pad-h-10 // horizontal padding by size
+.pad-v-10 // vertical padding by size
 
-```css
-.flex /* flex child elements */
-```
+.relative // relative position
+.position-absolute // absolute position
+.position-absolute-c // absolute position and centered
+.position-absolute-v // absolute position and centered vertically
 
-Using flex with breakpoints.
+.h-100 // height by percent
+.vh-100 // vertical height by percent
+.w-100 // width by percent
 
-```scss
-$breakpoints: (...
-```
+.color-grey-l // color from $colors config
+.bg-grey-l // background color from $colors config
 
-```css
-.flex-xs /* flex child elements at xs breakpoint */
-.flex-m /* flex child elements at m breakpoint */
-...
-```
+.txt-c // center aligned text
+.txt-l // left aligned text
+.txt-r // right aligned text
 
-There is also a class to reverse the flex layout of child elements.
+.hover-underline // underline on hover
+.no-underline // remove text decoration
 
-```css
-.flex-reverse /* flex reverse child elements */
-```
+.invisible // visibility hidden
+.visible // visibility visible
 
-Using flex reverse with breakpoints.
-
-```scss
-$breakpoints: (...
-```
-
-```css
-.flex-reverse-xs /* flex reverse child elements at xs breakpoint */
-.flex-reverse-m /* flex reverse child elements at m breakpoint */
-...
-```
-
-## Float
-
-Used to float elements.
-
-```css
-.fl /* float left */
-.fr /* float right */
-```
-
-## Margin
-
-Used to add / remove margins around elements.
-
-Configure using $margin-increments 
-
-```scss
-$margin-increments: (0, 5, 10, 15, 20, 25);
-```
-
-```css
-.mar-5 /* adds 5px margin around elements */
-.mar-h-5 /* adds 5px margin left and right around elements - horizontal */
-.mar-v-5 /* adds 5px margin top and bottom around elements - vertical */
-...
-```
-
-## Padding
-
-Used to add / remove padding around elements.
-
-Configure using $padding-increments 
-
-```scss
-$padding-increments: (0, 5, 10, 15, 20, 25);
-```
-
-```css
-.pad-5 /* adds 5px padding around elements */
-.pad-h-5 /* adds 5px padding left and right around elements - horizontal */
-.pad-v-5 /* adds 5px padding top and bottom around elements - vertical */
-...
-```
-
-## Position
-
-Used to make elements absolute and relative positioned.
-
-```css
-.position-c /* absolute positioned with a z-index of 1 and centered */
-.position-v /* absolute positioned with a z-index of 1 and centered vertically */
-.relative /* relative positioned with a z-index of 0 */
-```
-
-## Text Align
-
-Used to align text elements across breakpoints.
-
-```css
-.txt-l /* aligns text left */
-.txt-r /* aligns text right */
-.txt-c /* aligns text center */
-```
-
-Using text align with breakpoints.
-
-```scss
-$breakpoints: (...
-```
-
-```css
-.txt-l-xs /* aligns text left at xs breakpoint */
-.txt-l-m /* aligns text left at m breakpoint */
-...
-```
-
-## Vertical Height
-
-Used to define the vertical height on an element.
-
-Configure using $height-increments 
-
-```scss
-$height-increments: (0, 20, 40, 60, 80, 100);
-```
-
-```css
-.vh-20 /* 20% height */
-...
-```
-
-## Visibility
-
-Used to change element visibility.
-
-```css
-.visible /* visibility visible */
-.invisible /* visibility hidden */
-```
-
-## Width
-
-Used to set an elements width.
-
-Configure using $widths 
-
-```scss
-$widths: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
-```
-
-```css
-.w-5 /* 5% width */
-...
+.z-1 // z-index from $z-indexes config
 ```
